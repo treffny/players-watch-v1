@@ -91,8 +91,6 @@
       { "type": "rss", "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss" }
     ]
   },
-
-  // ---------- Allied defence primes & orgs ----------
   {
     "name": "Airbus Defence & Space",
     "tier": "mid",
@@ -135,8 +133,6 @@
       { "type": "rss", "url": "https://www.eucom.mil/syndication-feed/rss/press-releases" }
     ]
   },
-
-  // ---------- Opponents / state outlets ----------
   {
     "name": "TASS (Russia) – English",
     "tier": "mid",
