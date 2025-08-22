@@ -23,10 +23,10 @@ export const players = {
       notes: "RQ-4 Global Hawk, B-21 Raider, radars"
     },
     {
-      name: "Raytheon (RTX)",
+      name: "Raytheon",
       handle: "@RaytheonDefense",
       sectors: ["missiles", "EW", "radar", "C2"],
-      notes: "Patriot, AMRAAM, radars, jammers"
+      notes: "Patriot, AMRAAM, jammers, air defence radars"
     },
     {
       name: "General Dynamics",
@@ -44,19 +44,19 @@ export const players = {
       name: "Airbus Defence & Space",
       handle: "@AirbusDefence",
       sectors: ["air", "space", "ISR", "tankers"],
-      notes: "A400M, Eurofighter, satellites, MRTT"
+      notes: "A400M, Eurofighter, satellites, MRTT tanker"
     },
     {
       name: "Leonardo",
       handle: "@Leonardo_live",
       sectors: ["air", "naval", "EW", "helicopters"],
-      notes: "AW helicopters, M-346 trainer, radars"
+      notes: "AW helicopter line, M-346 trainer, radars"
     },
     {
       name: "General Atomics Aeronautical",
       handle: "@GenAtomics_ASI",
       sectors: ["UAS", "ISR", "strike"],
-      notes: "MQ-9 Reaper, Gray Eagle, Predator series"
+      notes: "MQ-9 Reaper, Gray Eagle, Predator family"
     },
     {
       name: "Boeing Defense",
@@ -186,25 +186,25 @@ export const players = {
   opposing: [
     {
       name: "Aviation Industry Corporation of China (AVIC)",
-      handle: "@AVICOfficial", // not always active
+      handle: null,
       sectors: ["air", "UAS", "engines"],
-      notes: "J-20 fighter, Z-10 helo, Wing Loong UAS"
+      notes: "J-20 stealth fighter, Z-10 attack helicopter, Wing Loong UAS family"
     },
     {
       name: "China Electronics Technology Group (CETC)",
-      handle: "@CETCofficial",
+      handle: null,
       sectors: ["radar", "EW", "ISR"],
       notes: "Counter-stealth radars, electronic warfare systems"
     },
     {
       name: "China North Industries Group (Norinco)",
-      handle: "@NorincoGroup",
+      handle: null,
       sectors: ["land", "armour", "artillery"],
       notes: "Tanks, IFVs, artillery, missiles"
     },
     {
       name: "China Aerospace Science and Technology Corp (CASC)",
-      handle: "@CASC_CN",
+      handle: null,
       sectors: ["space", "missiles"],
       notes: "Ballistic missiles, satellites, space launch"
     },
@@ -212,17 +212,17 @@ export const players = {
       name: "Russia – Rostec",
       handle: "@Rostec_Russia",
       sectors: ["air", "land", "EW"],
-      notes: "Sukhoi fighters, helicopters, air defence"
+      notes: "Sukhoi fighters, helicopters, air defence systems"
     },
     {
       name: "Russia – Almaz-Antey",
-      handle: "@AlmazAntey_ru",
+      handle: null,
       sectors: ["air defence", "missiles"],
       notes: "S-300, S-400, S-500 SAM systems"
     },
     {
       name: "Iran – Iran Aviation Industries Org (IAIO)",
-      handle: "@IAIO_IR",
+      handle: null,
       sectors: ["UAS", "missiles", "air"],
       notes: "Shahed drones, ballistic missiles"
     }
