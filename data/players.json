@@ -1,136 +1,230 @@
-[
-  {
-    "name": "Defense News",
-    "tier": "major",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml"
-      }
-    ]
-  },
-  {
-    "name": "Breaking Defense",
-    "tier": "major",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://breakingdefense.com/feed/"
-      }
-    ]
-  },
-  {
-    "name": "The War Zone",
-    "tier": "major",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.thedrive.com/the-war-zone/feed"
-      }
-    ]
-  },
-  {
-    "name": "RealClearDefense",
-    "tier": "mid",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.realcleardefense.com/index.xml"
-      }
-    ]
-  },
-  {
-    "name": "U.S. DoD",
-    "tier": "major",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.defense.gov/News/News-Stories/News-Stories-RSS/"
-      },
-      {
-        "type": "rss",
-        "url": "https://www.defense.gov/News/Newsroom/Releases/Release-RSS/"
-      }
-    ]
-  },
-  {
-    "name": "U.S. Navy",
-    "tier": "mid",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.navy.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=645&max=20"
-      }
-    ]
-  },
-  {
-    "name": "NATO",
-    "tier": "mid",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.nato.int/cps/en/natohq/news.rss"
-      }
-    ]
-  },
-  {
-    "name": "RAF News",
-    "tier": "mid",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.raf.mod.uk/umbraco/Api/NewsApi/GetRssFeed"
-      }
-    ]
-  },
-  {
-    "name": "Lockheed Martin",
-    "tier": "mid",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://news.lockheedmartin.com/rss"
-      }
-    ]
-  },
-  {
-    "name": "Northrop Grumman",
-    "tier": "mid",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://news.northropgrumman.com/rss"
-      }
-    ]
-  },
-  {
-    "name": "Thales Group",
-    "tier": "mid",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.thalesgroup.com/en/feeds/press-room/rss.xml"
-      }
-    ]
-  },
-  {
-    "name": "NVIDIA Newsroom",
-    "tier": "mid",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://nvidianews.nvidia.com/rss"
-      }
-    ]
-  },
-  {
-    "name": "NASA News",
-    "tier": "mid",
-    "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss"
-      }
-    ]
-  }
-]
+// players.js
+// Defence + aerospace companies with handles + core product lines
+// Categorised as major, mid, light, and opposing (non-Western competitors/adversaries)
+
+export const players = {
+  major: [
+    {
+      name: "BAE Systems",
+      handle: "@BAESystemsInc",
+      sectors: ["air", "land", "naval", "EW", "cyber"],
+      notes: "Eurofighter, Tempest, naval combat systems, EW suites"
+    },
+    {
+      name: "Lockheed Martin",
+      handle: "@LockheedMartin",
+      sectors: ["air", "space", "missiles", "naval"],
+      notes: "F-35, HIMARS, Aegis, satellites"
+    },
+    {
+      name: "Northrop Grumman",
+      handle: "@northropgrumman",
+      sectors: ["air", "UAS", "ISR", "space"],
+      notes: "RQ-4 Global Hawk, B-21 Raider, radars"
+    },
+    {
+      name: "Raytheon (RTX)",
+      handle: "@RaytheonDefense",
+      sectors: ["missiles", "EW", "radar", "C2"],
+      notes: "Patriot, AMRAAM, radars, jammers"
+    },
+    {
+      name: "General Dynamics",
+      handle: "@GD_LandSystems",
+      sectors: ["land", "naval", "C2"],
+      notes: "Abrams tanks, Stryker, submarines, C4ISR"
+    },
+    {
+      name: "Thales",
+      handle: "@thalesgroup",
+      sectors: ["space", "naval", "EW", "comms"],
+      notes: "Radars, optronics, satcom, sensors"
+    },
+    {
+      name: "Airbus Defence & Space",
+      handle: "@AirbusDefence",
+      sectors: ["air", "space", "ISR", "tankers"],
+      notes: "A400M, Eurofighter, satellites, MRTT"
+    },
+    {
+      name: "Leonardo",
+      handle: "@Leonardo_live",
+      sectors: ["air", "naval", "EW", "helicopters"],
+      notes: "AW helicopters, M-346 trainer, radars"
+    },
+    {
+      name: "General Atomics Aeronautical",
+      handle: "@GenAtomics_ASI",
+      sectors: ["UAS", "ISR", "strike"],
+      notes: "MQ-9 Reaper, Gray Eagle, Predator series"
+    },
+    {
+      name: "Boeing Defense",
+      handle: "@BoeingDefense",
+      sectors: ["air", "space", "missiles"],
+      notes: "F-15, KC-46, P-8, satellites"
+    },
+    {
+      name: "Israel Aerospace Industries (IAI)",
+      handle: "@ILAerospaceIAI",
+      sectors: ["UAS", "missiles", "space", "radar"],
+      notes: "Heron UAS, Barak missiles, satellites, radars"
+    },
+    {
+      name: "Rafael Advanced Defense Systems",
+      handle: "@RAFAELdefense",
+      sectors: ["missiles", "EW", "air defence"],
+      notes: "Iron Dome, Spike missiles, Trophy APS"
+    },
+    {
+      name: "Hanwha Aerospace",
+      handle: "@HanwhaAerospace",
+      sectors: ["land", "air", "artillery"],
+      notes: "K9 howitzer, Redback IFV, propulsion systems"
+    },
+    {
+      name: "Korea Aerospace Industries (KAI)",
+      handle: "@KAI_Company",
+      sectors: ["air", "trainers", "UAS"],
+      notes: "KF-21 fighter, T-50 trainer, Surion helicopter"
+    },
+    {
+      name: "Mitsubishi Heavy Industries",
+      handle: "@MHI_Group",
+      sectors: ["air", "naval", "missiles"],
+      notes: "F-X fighter, submarines, missiles"
+    }
+  ],
+  mid: [
+    {
+      name: "Sierra Nevada Corporation",
+      handle: "@SierraNevCorp",
+      sectors: ["air", "space", "ISR", "training"],
+      notes: "A-29 trainer, Dream Chaser, Freedom Jet"
+    },
+    {
+      name: "Textron Systems",
+      handle: "@TextronSystems",
+      sectors: ["UAS", "land", "strike"],
+      notes: "Shadow UAS, armoured vehicles, munitions"
+    },
+    {
+      name: "Kratos Defense",
+      handle: "@KratosDefense",
+      sectors: ["UAS", "autonomy", "targets"],
+      notes: "XQ-58 Valkyrie, target drones, attritable systems"
+    },
+    {
+      name: "L3Harris",
+      handle: "@L3HarrisTech",
+      sectors: ["ISR", "comms", "EW"],
+      notes: "Avionics, sensors, comms pods, EW payloads"
+    },
+    {
+      name: "SAIC",
+      handle: "@SAICinc",
+      sectors: ["IT", "C2", "cyber"],
+      notes: "Systems integration, networks, C2"
+    },
+    {
+      name: "Elbit Systems",
+      handle: "@ElbitSystemsLtd",
+      sectors: ["UAS", "land", "EW"],
+      notes: "Hermes UAS, avionics, artillery systems"
+    },
+    {
+      name: "Kawasaki Heavy Industries (KHI)",
+      handle: "@KawasakiHeavyEn",
+      sectors: ["air", "naval", "engines"],
+      notes: "P-1 patrol aircraft, C-2 transport, submarines"
+    }
+  ],
+  light: [
+    {
+      name: "Anduril Industries",
+      handle: "@AndurilTech",
+      sectors: ["UAS", "autonomy", "ISR", "counter-UAS"],
+      notes: "Ghost UAS, Lattice AI C2, counter-drone"
+    },
+    {
+      name: "Shield AI",
+      handle: "@ShieldAI",
+      sectors: ["autonomy", "UAS"],
+      notes: "Hivemind AI, V-BAT UAS"
+    },
+    {
+      name: "Palantir",
+      handle: "@PalantirTech",
+      sectors: ["AI", "C2", "data"],
+      notes: "Foundry, AI mission planning, battle management"
+    },
+    {
+      name: "Skydio",
+      handle: "@SkydioHQ",
+      sectors: ["UAS", "ISR"],
+      notes: "Autonomous quadcopters for ISR and security"
+    },
+    {
+      name: "Epirus",
+      handle: "@EpirusInc",
+      sectors: ["counter-UAS", "EW"],
+      notes: "Leonidas HPM counter-drone system"
+    },
+    {
+      name: "Percepto",
+      handle: "@PerceptoUAV",
+      sectors: ["UAS", "ISR"],
+      notes: "Autonomous drone-in-a-box ISR solutions"
+    },
+    {
+      name: "Trillium Engineering",
+      handle: "@TrilliumCam",
+      sectors: ["ISR", "sensors"],
+      notes: "High-performance ISR gimbals for UAS"
+    }
+  ],
+  opposing: [
+    {
+      name: "Aviation Industry Corporation of China (AVIC)",
+      handle: "@AVICOfficial", // not always active
+      sectors: ["air", "UAS", "engines"],
+      notes: "J-20 fighter, Z-10 helo, Wing Loong UAS"
+    },
+    {
+      name: "China Electronics Technology Group (CETC)",
+      handle: "@CETCofficial",
+      sectors: ["radar", "EW", "ISR"],
+      notes: "Counter-stealth radars, electronic warfare systems"
+    },
+    {
+      name: "China North Industries Group (Norinco)",
+      handle: "@NorincoGroup",
+      sectors: ["land", "armour", "artillery"],
+      notes: "Tanks, IFVs, artillery, missiles"
+    },
+    {
+      name: "China Aerospace Science and Technology Corp (CASC)",
+      handle: "@CASC_CN",
+      sectors: ["space", "missiles"],
+      notes: "Ballistic missiles, satellites, space launch"
+    },
+    {
+      name: "Russia – Rostec",
+      handle: "@Rostec_Russia",
+      sectors: ["air", "land", "EW"],
+      notes: "Sukhoi fighters, helicopters, air defence"
+    },
+    {
+      name: "Russia – Almaz-Antey",
+      handle: "@AlmazAntey_ru",
+      sectors: ["air defence", "missiles"],
+      notes: "S-300, S-400, S-500 SAM systems"
+    },
+    {
+      name: "Iran – Iran Aviation Industries Org (IAIO)",
+      handle: "@IAIO_IR",
+      sectors: ["UAS", "missiles", "air"],
+      notes: "Shahed drones, ballistic missiles"
+    }
+  ]
+};
