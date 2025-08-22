@@ -1,10 +1,10 @@
 // pages/api/[[...slug]].js
 import Parser from 'rss-parser';
-import players from '../../data/players.json';
+import playersRaw from '../../data/players.json';
 
-// ===== utilities =====
 const parser = new Parser({ timeout: 10000 });
 
+// ---- utilities
 function parseDateSafe(d) {
   const t = Date.parse(d);
   return Number.isNaN(t) ? Date.now() : t;
@@ -39,7 +39,17 @@ async function fetchRssFeed(url) {
   }
 }
 
-// ===== route handlers =====
+// ---- normalise players.json input
+function getPlayersArray() {
+  // Accept either a top-level array or an object with .players
+  if (Array.isArray(playersRaw)) return playersRaw;
+  if (playersRaw && Array.isArray(playersRaw.players)) return playersRaw.players;
+
+  // Nothing usable
+  return null;
+}
+
+// ---- handlers
 async function handleRss(req, res) {
   try {
     const body = req.method === 'POST' ? (req.body || {}) : (req.query || {});
@@ -48,8 +58,22 @@ async function handleRss(req, res) {
     const tiers = Array.isArray(body.tiers) ? body.tiers : ['major', 'mid', 'light'];
     const cutoffMs = Date.now() - lookbackHours * 3600 * 1000;
 
+    const playersArr = getPlayersArray();
+    if (!playersArr) {
+      return res.status(200).json({
+        count: 0,
+        items: [],
+        debug: {
+          error: 'players.json is not an array',
+          typeofPlayers: typeof playersRaw,
+          keys: playersRaw && typeof playersRaw === 'object' ? Object.keys(playersRaw) : null,
+          hint: 'Use a top-level JSON array or { "players": [...] }'
+        }
+      });
+    }
+
     const urls = [];
-    for (const p of players) {
+    for (const p of playersArr) {
       if (!tiers.includes(p.tier)) continue;
       for (const f of p.feeds || []) {
         if (f?.type === 'rss' && f?.url) urls.push({ url: f.url, sourceName: p.name });
@@ -83,7 +107,7 @@ async function handleRss(req, res) {
       allItems.push(...picked);
     });
 
-    // De-dupe by link (or title)
+    // De‑dupe by link (or title)
     const seen = new Set();
     const deduped = [];
     for (const it of allItems) {
@@ -93,7 +117,6 @@ async function handleRss(req, res) {
       deduped.push(it);
     }
 
-    // Sort newest first and cap
     deduped.sort((a, b) => parseDateSafe(b.createdAt) - parseDateSafe(a.createdAt));
     const capped = deduped.slice(0, 120);
 
@@ -103,30 +126,30 @@ async function handleRss(req, res) {
       debug: { feedsInEnv: urls.length, errors }
     });
   } catch (e) {
-    return res.status(200).json({ count: 0, items: [], debug: { error: String(e?.message || e) } });
+    return res.status(200).json({
+      count: 0,
+      items: [],
+      debug: { error: String(e?.message || e) }
+    });
   }
 }
 
-// ===== router =====
+// ---- router
 export default async function handler(req, res) {
   try {
-    // normalise path like "posts/rss"
-    const slug = (req.query.slug ?? [])
-      .filter(Boolean)
-      .join('/')
-      .toLowerCase();
+    const slug = (req.query.slug ?? []).filter(Boolean).join('/').toLowerCase();
+    if (slug === 'posts/rss' || slug === 'rss') return handleRss(req, res);
 
-    if (slug === 'posts/rss' || slug === 'rss') {
-      return handleRss(req, res);
-    }
-
-    // Fallback 404 (still JSON)
     return res.status(200).json({
       count: 0,
       items: [],
       debug: { error: `Unknown endpoint "${slug}".` }
     });
   } catch (e) {
-    return res.status(200).json({ count: 0, items: [], debug: { error: String(e?.message || e) } });
+    return res.status(200).json({
+      count: 0,
+      items: [],
+      debug: { error: String(e?.message || e) }
+    });
   }
 }
