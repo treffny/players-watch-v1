@@ -3,134 +3,159 @@
     "name": "Defense News",
     "tier": "major",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml"
-      }
+      { "type": "rss", "url": "https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml" }
     ]
   },
   {
     "name": "Breaking Defense",
     "tier": "major",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://breakingdefense.com/feed/"
-      }
+      { "type": "rss", "url": "https://breakingdefense.com/feed/" }
     ]
   },
   {
     "name": "The War Zone",
     "tier": "major",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.thedrive.com/the-war-zone/feed"
-      }
+      { "type": "rss", "url": "https://www.thedrive.com/the-war-zone/feed" }
     ]
   },
   {
     "name": "RealClearDefense",
     "tier": "mid",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.realcleardefense.com/index.xml"
-      }
+      { "type": "rss", "url": "https://www.realcleardefense.com/index.xml" }
     ]
   },
   {
     "name": "U.S. DoD",
     "tier": "major",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.defense.gov/News/News-Stories/News-Stories-RSS/"
-      },
-      {
-        "type": "rss",
-        "url": "https://www.defense.gov/News/Newsroom/Releases/Release-RSS/"
-      }
+      { "type": "rss", "url": "https://www.defense.gov/News/News-Stories/News-Stories-RSS/" },
+      { "type": "rss", "url": "https://www.defense.gov/News/Newsroom/Releases/Release-RSS/" }
     ]
   },
   {
     "name": "U.S. Navy",
     "tier": "mid",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.navy.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=645&max=20"
-      }
+      { "type": "rss", "url": "https://www.navy.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=645&max=20" }
     ]
   },
   {
     "name": "NATO",
     "tier": "mid",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.nato.int/cps/en/natohq/news.rss"
-      }
+      { "type": "rss", "url": "https://www.nato.int/cps/en/natohq/news.rss" }
     ]
   },
   {
     "name": "RAF News",
     "tier": "mid",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.raf.mod.uk/umbraco/Api/NewsApi/GetRssFeed"
-      }
+      { "type": "rss", "url": "https://www.raf.mod.uk/umbraco/Api/NewsApi/GetRssFeed" }
     ]
   },
   {
     "name": "Lockheed Martin",
     "tier": "mid",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://news.lockheedmartin.com/rss"
-      }
+      { "type": "rss", "url": "https://news.lockheedmartin.com/rss" }
     ]
   },
   {
     "name": "Northrop Grumman",
     "tier": "mid",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://news.northropgrumman.com/rss"
-      }
+      { "type": "rss", "url": "https://news.northropgrumman.com/rss" }
     ]
   },
   {
     "name": "Thales Group",
     "tier": "mid",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.thalesgroup.com/en/feeds/press-room/rss.xml"
-      }
+      { "type": "rss", "url": "https://www.thalesgroup.com/en/feeds/press-room/rss.xml" }
     ]
   },
   {
     "name": "NVIDIA Newsroom",
     "tier": "mid",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://nvidianews.nvidia.com/rss"
-      }
+      { "type": "rss", "url": "https://nvidianews.nvidia.com/rss" }
     ]
   },
   {
     "name": "NASA News",
     "tier": "mid",
     "feeds": [
-      {
-        "type": "rss",
-        "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss"
-      }
+      { "type": "rss", "url": "https://www.nasa.gov/rss/dyn/breaking_news.rss" }
+    ]
+  },
+
+  // ---------- Allied defence primes & orgs ----------
+  {
+    "name": "Airbus Defence & Space",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://www.airbus.com/en/generate-rss-feeds?fid=29721&tid=15576" }
+    ]
+  },
+  {
+    "name": "General Dynamics (Press Releases)",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://investorrelations.gd.com/rss/pressrelease.aspx" }
+    ]
+  },
+  {
+    "name": "Kongsberg Defence & Aerospace",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://www.kongsberg.com/kda/syndication-feed/rss/news/" }
+    ]
+  },
+  {
+    "name": "Saab (Press Releases)",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://www.saab.com/newsroom/press-releases?format=rss" }
+    ]
+  },
+  {
+    "name": "Rheinmetall (Newsroom)",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://www.rheinmetall.com/en/media/news/_jcr_content/root/responsivegrid/container_copy_copy_copy/rssfeed.rss" }
+    ]
+  },
+  {
+    "name": "EUCOM (US European Command) Press Releases",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://www.eucom.mil/syndication-feed/rss/press-releases" }
+    ]
+  },
+
+  // ---------- Opponents / state outlets ----------
+  {
+    "name": "TASS (Russia) – English",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://tass.com/rss/v2.xml" }
+    ]
+  },
+  {
+    "name": "Xinhua (China) – English",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://english.news.cn/rss/index.xml" }
+    ]
+  },
+  {
+    "name": "IRNA (Iran) – English",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://en.irna.ir/rss" }
     ]
   }
 ]
