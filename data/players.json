@@ -1,5 +1,40 @@
 [
   {
+    "name": "Defense Blog",
+    "tier": "major",
+    "feeds": [
+      { "type": "rss", "url": "https://defence-blog.com/feed/" }
+    ]
+  },
+  {
+    "name": "Defense One",
+    "tier": "major",
+    "feeds": [
+      { "type": "rss", "url": "https://www.defenseone.com/rss/all/" }
+    ]
+  },
+  {
+    "name": "The Diplomat",
+    "tier": "major",
+    "feeds": [
+      { "type": "rss", "url": "https://thediplomat.com/category/asia-defense/feed/" }
+    ]
+  },
+{
+    "name": "Indian Defence News",
+    "tier": "major",
+    "feeds": [
+      { "type": "rss", "url": "https://www.indiandefensenews.in/feeds/posts/default?alt=rss" }
+    ]
+  },
+  {
+    "name": "Quwa",
+    "tier": "major",
+    "feeds": [
+      { "type": "rss", "url": "https://quwa.org/feed/" }
+    ]
+  },
+  {
     "name": "Defense News",
     "tier": "major",
     "feeds": [
