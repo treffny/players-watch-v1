@@ -183,6 +183,34 @@
     ]
   },
   {
+    "name": "MIT",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://news.mit.edu/rss/topic/artificial-intelligence2" }
+    ]
+  },
+  {
+    "name": "Berkley",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://bair.berkeley.edu/blog/feed.xml" }
+    ]
+  },
+  {
+    "name": "Google",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://research.google/blog/rss/" }
+    ]
+  },
+  {
+    "name": "Blockchain",
+    "tier": "mid",
+    "feeds": [
+      { "type": "rss", "url": "https://www.blockchainresearchlab.org/feed/" }
+    ]
+  },
+  {
     "name": "IRNA (Iran) – English",
     "tier": "mid",
     "feeds": [
