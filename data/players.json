@@ -14,6 +14,13 @@
     ]
   },
   {
+    "name": "arxiv",
+    "tier": "major",
+    "feeds": [
+      { "type": "rss", "url": "https://rss.arxiv.org/rss/cs.AI+cs.RO+cs.CR+cs.CY+eess.SY+physics.geo-ph+econ.GN" }
+    ]
+  },
+  {
     "name": "The Diplomat",
     "tier": "major",
     "feeds": [
